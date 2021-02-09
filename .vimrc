@@ -40,6 +40,7 @@ set noerrorbells " Disable beep on errors.
 set title " Set the window’s title, reflecting the file currently being edited.
 " Only for unix users.
 set mouse=a " Enable mouse for scrolling and resizing.
+set backspace=indent,eol,start
 
 " Miscellaneous Options
 set autoread " Automatically re-read files if unmodified inside Vim.
@@ -60,9 +61,6 @@ Plug 'morhetz/gruvbox'
 
 " Lightline settings
 Plug 'itchyny/lightline.vim'
-
-" Language syntaxes
-Plug 'leafgarland/typescript-vim'
 
 " Initialize plugin system
 call plug#end()
