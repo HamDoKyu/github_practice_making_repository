@@ -72,7 +72,6 @@ call plug#end()
 
 " Color scheme settings
 set t_Co=256
-colo gruvbox
 set background=dark
 " TODO: Find a way to prevent syntax highlighting from being disabled over color-column.
 highlight ColorColumn guibg=#2d2d2d 
