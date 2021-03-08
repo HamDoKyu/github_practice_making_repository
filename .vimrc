@@ -15,6 +15,8 @@ set smarttab " Insert “tabstop” number of spaces when the “tab” key is p
 au Filetype make set noexpandtab nosmarttab tabstop=8 shiftwidth=8
 " do not copy comment symbol to the next line
 au Filetype * set fo-=c fo-=r fo-=o
+" git commit support
+au Filetype gitcommit setlocal textwidth=72 colorcolumn=+1
 
 " Search options
 set hlsearch " Highlight searched keyword
@@ -40,10 +42,14 @@ set noerrorbells " Disable beep on errors.
 set title " Set the window’s title, reflecting the file currently being edited.
 " Only for unix users.
 set mouse=a " Enable mouse for scrolling and resizing.
+set backspace=indent,eol,start
 
 " Miscellaneous Options
 set autoread " Automatically re-read files if unmodified inside Vim.
 set history=500 " Increase the undo limit
+set nowrap
+set encoding=utf-8 " The encoding displayed.
+set fileencoding=utf-8 " The encoding written to file.
 
 " Auto install plugins
 if empty(glob('~/.vim/autoload/plug.vim'))
@@ -60,9 +66,6 @@ Plug 'morhetz/gruvbox'
 
 " Lightline settings
 Plug 'itchyny/lightline.vim'
-
-" Language syntaxes
-Plug 'leafgarland/typescript-vim'
 
 " Initialize plugin system
 call plug#end()
